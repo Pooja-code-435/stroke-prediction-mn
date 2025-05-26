@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Health Prediction</title>
+  <link rel="stylesheet" href="static/css/index.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav>
+      <div class="logo">HealthPredict</div>
+      <ul class="nav-links">
+        <li><a href="/" class="active">Home</a></li>
+        <li><a href="/predict">Predict</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home">
+    <h1>Welcome to HealthPredict</h1>
+    <p>Your AI-powered assistant for health risk prediction.</p>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About</h2>
+    <p>HealthPredict is a project that uses machine learning to help users identify potential health risks early based on basic input data. It's designed to be fast, secure, and user-friendly.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: support@healthpredict.com</p>
+    <p>Phone: +91-12345-67890</p>
+  </section>
+
+  <script>
+    document.getElementById("predictionForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const age = document.getElementById("age").value;
+      const gender = document.getElementById("gender").value;
+      const weight = document.getElementById("weight").value;
+      const symptom = document.getElementById("symptom").value;
+
+      // Dummy output - replace with API call later
+      document.getElementById("result").innerText = 
+        `Prediction: Age ${age}, Gender ${gender}, Weight ${weight}, Symptom ${symptom}`;
+    });
+  </script>
+
+</body>
+</html>

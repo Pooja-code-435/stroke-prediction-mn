@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Health Prediction</title>
+  <link rel="stylesheet" href="static/css/predict.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  
+
+  
+</head>
+<body>
+
+  
+  {% if prediction %}
+<script>
+  Swal.fire({
+    title: '{{ prediction }}',
+    icon: '{{ "warning" if "having" in prediction else "success" }}'
+  });
+</script>
+{% endif %}
+ 
+
+
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <div class="logo">HealthPredict</div>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/predict" class="active">Predict</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Prediction Form Section -->
+  <section class="predict-section">
+    <h2>Health Risk Prediction</h2>
+    <form id="predictionForm" method="POST" action="/predict">
+      <label for="age">Age</label>
+      <input type="number" id="age" name="age" placeholder="Enter your age" required />
+
+      <label for="gender">Gender</label>
+      <select id="gender" name="gender" required>
+        <option value="">Select</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+
+      <label for="hypertension">Hyper Tension</label>
+      <select id="hyper" name="hyper" required>
+        <option value="">Select</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+      
+      <label for="heart">Heart disease</label>
+      <select id="heart" name="heart" required>
+        <option value="">Select</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+
+      <label for="age">Glucose level</label>
+      <input type="number" id="glucose" name="glucose" placeholder="Enter avg glucose level" required />
+
+      <label for="age">BMI</label>
+      <input type="number" id="bmi" name="bmi" placeholder="Enter BMI" required />
+
+      <label for="smoke">Smoking Status</label>
+      <select id="smoke" name="smoke" required>
+        <option value="">Select</option>
+        <option value="formely smoked">formely smoked</option>
+        <option value="never smoked">never smoked</option>
+        <option value="smokes">smokes</option>
+        <option value="unknown">unknown</option>
+      </select>
+
+      <label for="residence">Residence type</label>
+      <select id="residence" name="residence" required>
+        <option value="">Select</option>
+        <option value="rural">Rural</option>
+        <option value="urban">Urban</option>
+      </select>
+
+      
+      <button type="submit">Predict</button>
+    </form>
+
+    <div class="result" id="result"></div>
+  </section>
+
+  
+
+</body>
+</html>

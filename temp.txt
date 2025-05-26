@@ -1,0 +1,12 @@
+Python 3.9.7
+
+conda create --name health_stroke python=3.9.7
+
+conda activate health_stroke 
+
+conda deactivate 
+
+
+first deactivate other environment then activate your environment,run python app.py
+
+comda env list-listing the envs 
