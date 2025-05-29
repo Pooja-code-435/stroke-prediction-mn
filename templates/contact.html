@@ -2,47 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Us - HealthPredict</title>
-  <link rel="stylesheet" href="static/css/contact.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Heart Stroke Prediction System</title>
+  <link rel="stylesheet" href="static/css/contact.css"/>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  <!-- Navigation -->
+  <header class="nav-bar">
+    <h1>Heart Stroke <br><span>Prediction System</span></h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="predict.html">Predict</a>
+      <a class="active" href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-<header>
-  <nav>
-    <div class="logo">HealthPredict</div>
-    <ul class="nav-links">
-      <li><a href="/">Home</a></li>
-      <li><a href="/predict">Predict</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/contact" class="active">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <h2>Contact Us</h2>
+    <p>Have questions or need help? Reach out through any of the methods below.</p>
 
-<main>
-  <div class="contact-container">
-    <h1>Contact Us</h1>
-    <p>Have questions or feedback? We'd love to hear from you!</p>
-    
-    <form action="/submit-contact" method="post" class="contact-form">
-      <label for="name">Your Name</label>
-      <input type="text" id="name" name="name" required />
+    <div class="contact-box">
+      <div class="contact-item">
+        <i class="fas fa-phone"></i>
+        <h3>Phone</h3>
+        <p>‪+91 95910 26834‬</p>
+      </div>
+    <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <h3>Email</h3>
+        <p><a href="mailto=sparshapoojary60@gmail.com">sparshapoojary60@gmail.com</a></p>
+    </div>
+    <div class="contact-item">
+        <i class="fab fa-facebook"></i>
+        <h3>Facebook</h3>
+        <p><a href="#">/sparsha</a></p>
+    </div>
+    <div class="contact-item">
+        <i class="fab fa-instagram"></i>
+        <h3>Instagram</h3>
+        <p><a href="#">@sparsha_poojary</a></p>
+    </div>
+    </div>
+  </section>
 
-      <label for="email">Your Email</label>
-      <input type="email" id="email" name="email" required />
-
-      <label for="message">Your Message</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-
-      <button type="submit">Send Message</button>
-    </form>
-  </div>
-</main>
-
-<footer>
-  &copy; 2025 HealthPredict | All rights reserved
-</footer>
-
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Heart Stroke Prediction System</p>
+  </footer>
 </body>
 </html>
